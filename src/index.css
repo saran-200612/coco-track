@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coco-50: #f8fafc;
+  --color-coco-600: #4f46e5;
+  --color-coco-900: #312e81;
+}
+
+:root {
+  color-scheme: dark;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
+body { 
+  background-color: #09090B; 
+  color: #f8fafc; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overscroll-behavior-y: none;
+}
+
+/* Custom Mobile Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-card { 
+  @apply bg-slate-900/70 border border-slate-800/80 rounded-3xl p-5 backdrop-blur-md; 
+}
+
+.coco-btn-primary { 
+  @apply bg-indigo-600 active:bg-indigo-700 text-white font-semibold tracking-wide text-sm py-3 px-5 rounded-2xl shadow-lg shadow-indigo-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2; 
+}
+
+.coco-btn-secondary {
+  @apply bg-slate-800 active:bg-slate-700 text-slate-200 font-medium text-sm py-3 px-4 rounded-2xl border border-slate-700/60 active:scale-[0.98] transition-all flex items-center justify-center gap-2;
+}
+
+.coco-input { 
+  @apply w-full border border-slate-800/80 rounded-2xl px-4 py-3.5 bg-slate-950/60 focus:border-indigo-500/80 focus:ring-2 focus:ring-indigo-500/20 outline-none text-slate-100 placeholder-slate-500 text-sm transition-all; 
+}
+
+.mobile-badge {
+  @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide;
+}
+
+/* Safe area padding for mobile notches */
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 5rem);
+}
+

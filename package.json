@@ -1,0 +1,49 @@
+{
+  "name": "cocotrack-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@stomp/stompjs": "^7.0.0",
+    "@tanstack/react-query": "^5.28.4",
+    "axios": "^1.6.8",
+    "better-sqlite3": "^13.0.3",
+    "clsx": "^2.1.0",
+    "cors": "^2.8.6",
+    "dexie": "^4.0.4",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "lucide-react": "^0.363.0",
+    "motion": "^13.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.2",
+    "recharts": "^2.12.3",
+    "sockjs-client": "^1.6.1",
+    "tailwind-merge": "^2.2.2",
+    "ws": "^8.21.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/sockjs-client": "^1.5.4",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.23.12",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
